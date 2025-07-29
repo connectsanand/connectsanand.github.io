@@ -153,6 +153,12 @@ const services = [
         title: 'Ongoing Support',
         description: 'Continued maintenance, updates, and support to keep your website running at its best.',
         features: ['Bug Fixes', 'Security Updates', 'Content Updates', '24/7 Monitoring']
+    },
+    {
+        icon: 'fas fa-flag',
+        title: 'Landing Page Development',
+        description: 'High-converting landing pages tailored for marketing campaigns, product launches, and lead generation.',
+        features: ['Conversion-Focused Design', 'Fast Load Times', 'A/B Testing Ready', 'Integrations with CRM & Analytics']
     }
 ];
 
