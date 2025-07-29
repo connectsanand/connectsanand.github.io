@@ -83,54 +83,42 @@ const projects = [
         title: 'E-Commerce Platform',
         description: 'A modern e-commerce solution built with React, Node.js, and Stripe integration. Features include user authentication, product catalog, shopping cart, and payment processing.',
         image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800',
-        tags: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-        liveUrl: '#',
-        githubUrl: '#'
+        tags: ['React', 'Node.js', 'MongoDB', 'Stripe']
     },
     {
         id: 2,
         title: 'Task Management App',
         description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features built with Next.js and Socket.io.',
         image: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800',
-        tags: ['Next.js', 'TypeScript', 'Socket.io', 'PostgreSQL'],
-        liveUrl: '#',
-        githubUrl: '#'
+        tags: ['Next.js', 'TypeScript', 'Socket.io', 'PostgreSQL']
     },
     {
         id: 3,
         title: 'Restaurant Website',
         description: 'A beautiful, responsive restaurant website with online reservation system, menu display, and contact forms. Optimized for mobile devices and search engines.',
         image: 'https://images.pexels.com/photos/1639562/pexels-photo-1639562.jpeg?auto=compress&cs=tinysrgb&w=800',
-        tags: ['React', 'Tailwind CSS', 'Firebase', 'PWA'],
-        liveUrl: '#',
-        githubUrl: '#'
+        tags: ['React', 'Tailwind CSS', 'Firebase', 'PWA']
     },
     {
         id: 4,
         title: 'Portfolio Dashboard',
         description: 'A comprehensive dashboard for managing investment portfolios with real-time data visualization, charts, and analytics. Built with modern React and D3.js.',
         image: 'https://images.pexels.com/photos/186461/pexels-photo-186461.jpeg?auto=compress&cs=tinysrgb&w=800',
-        tags: ['React', 'D3.js', 'REST API', 'Material-UI'],
-        liveUrl: '#',
-        githubUrl: '#'
+        tags: ['React', 'D3.js', 'REST API', 'Material-UI']
     },
     {
         id: 5,
         title: 'Learning Management System',
         description: 'An educational platform with course management, video streaming, quizzes, and progress tracking. Designed for scalability and user engagement.',
         image: 'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=800',
-        tags: ['Vue.js', 'Express.js', 'MySQL', 'AWS'],
-        liveUrl: '#',
-        githubUrl: '#'
+        tags: ['Vue.js', 'Express.js', 'MySQL', 'AWS']
     },
     {
         id: 6,
         title: 'Weather Analytics App',
         description: 'A weather tracking application with detailed analytics, forecasts, and historical data visualization. Features location-based weather updates and alerts.',
         image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800',
-        tags: ['React Native', 'Redux', 'Weather API', 'Charts.js'],
-        liveUrl: '#',
-        githubUrl: '#'
+        tags: ['React Native', 'Redux', 'Weather API', 'Charts.js']
     }
 ];
 
@@ -177,14 +165,6 @@ function populateProjects() {
         <div class="project-card">
             <div class="project-image">
                 <img src="${project.image}" alt="${project.title}">
-                <div class="project-overlay">
-                    <a href="${project.liveUrl}" class="project-link" title="View Live">
-                        <i class="fas fa-external-link-alt"></i>
-                    </a>
-                    <a href="${project.githubUrl}" class="project-link" title="View Code">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </div>
             </div>
             <div class="project-content">
                 <h3 class="project-title">${project.title}</h3>
