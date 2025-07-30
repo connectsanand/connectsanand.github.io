@@ -209,7 +209,7 @@ if (contactForm) {
 
         const formData = new FormData(contactForm);
 
-        fetch('https://formsubmit.co/ajax/urstruly.anandm@gmail.com', {
+        fetch('https://formsubmit.co/ajax/connect.anandm@gmail.com', {
             method: 'POST',
             headers: { 'Accept': 'application/json' },
             body: formData
