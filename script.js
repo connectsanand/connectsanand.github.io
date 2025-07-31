@@ -202,37 +202,36 @@ function populateServices() {
     `).join('');
 }
 
-// Contact form handling
-const contactForm = document.querySelector('#contact-form');
+document.addEventListener("DOMContentLoaded", () => {
+  const contactForm = document.querySelector("#contact-form");
 
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
+  if (contactForm) {
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
 
-        const formData = new FormData(contactForm);
+      const formData = new FormData(contactForm);
 
-        fetch('https://formspree.io/f/mqalllno', {
-            method: 'POST',
-            headers: { 'Accept': 'application/json' },
-            body: formData
+      fetch("https://formspree.io/f/mqalllno", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: formData,
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          alert("Thank you! Your message has been sent.");
+          contactForm.reset();
         })
-        .then(response => {
-            if (response.ok) {
-                alert('Thank you! Your message has been sent.');
-                contactForm.reset();
-            } else {
-                return response.json().then(data => {
-                    throw new Error(data.error || 'Form submission failed');
-                });
-            }
-        })
-        .catch(error => {
-            alert('Oops! Something went wrong.');
-            console.error(error);
+        .catch((error) => {
+          alert("Oops! Something went wrong.");
+          console.error(error);
         });
     });
-}
-
+  } else {
+    console.log("Form not found");
+  }
+});
 
 // Initialize animations on scroll
 const animateOnScroll = new IntersectionObserver((entries) => {
