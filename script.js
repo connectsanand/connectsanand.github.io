@@ -203,21 +203,28 @@ function populateServices() {
 }
 
 // Contact form handling
+const contactForm = document.querySelector('#contactForm');
+
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
         const formData = new FormData(contactForm);
 
-        fetch('https://formsubmit.co/ajax/connect.anandm@gmail.com', {
+        fetch('https://formspree.io/f/mqalllno', {
             method: 'POST',
             headers: { 'Accept': 'application/json' },
             body: formData
         })
-        .then(response => response.json())
-        .then(data => {
-            alert('Thank you! Your message has been sent.');
-            contactForm.reset();
+        .then(response => {
+            if (response.ok) {
+                alert('Thank you! Your message has been sent.');
+                contactForm.reset();
+            } else {
+                return response.json().then(data => {
+                    throw new Error(data.error || 'Form submission failed');
+                });
+            }
         })
         .catch(error => {
             alert('Oops! Something went wrong.');
