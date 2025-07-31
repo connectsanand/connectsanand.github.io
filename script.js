@@ -220,7 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
       })
         .then((response) => response.json())
         .then((data) => {
-          alert("Thank you! Your message has been sent.");
+          alert("Thank you! Your message has been sent. Our development team will contact you");
           contactForm.reset();
         })
         .catch((error) => {
