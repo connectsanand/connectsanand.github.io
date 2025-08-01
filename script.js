@@ -216,7 +216,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const message = formData.get("message");
 
       try {
-        const response = await fetch("/submit", {
+        const response = await fetch("https://formcollect.onrender.com/submit", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -225,7 +225,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         if (response.ok) {
-          alert("Thank you! Your message has been sent. Our development team will contact you");
+          alert("Thank you! Your message has been sent. Our development team will contact you.");
           contactForm.reset();
         } else {
           alert("Oops! Something went wrong. Please try again later.");
